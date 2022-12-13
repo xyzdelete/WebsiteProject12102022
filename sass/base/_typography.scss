@@ -45,6 +45,7 @@ body {
         $color-primary-dark
     );
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 
     letter-spacing: 0.2rem;
