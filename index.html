@@ -16,6 +16,48 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+        <div class="navigation">
+            <input
+                id="navi-toggle"
+                type="checkbox"
+                class="navigation__checkbox"
+            />
+
+            <label for="navi-toggle" class="navigation__button">MENU</label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"
+                            ><span>01</span> Natours</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"
+                            ><span>02</span> Your benefits</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"
+                            ><span>03</span> Popular tours</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"
+                            ><span>04</span> Stories</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link"
+                            ><span>05</span> Book now</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/logo-white.png" alt="Logo" class="header__logo" />
@@ -264,8 +306,168 @@
                     <a href="#" class="btn btn--green">Discover all tours</a>
                 </div>
             </section>
-        </main>
+            <section class="section-stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/video.mp4" type="video/mp4" />
+                        <source src="img/video.webm" type="video/webm" />
+                        Your browser is not supported!
+                    </video>
+                </div>
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        We make people genuinely happy
+                    </h2>
+                </div>
 
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img
+                                src="img/nat-8.jpg"
+                                alt="Person on a tour"
+                                class="story__img"
+                            />
+
+                            <figcaption class="story__caption">
+                                Mary Smith
+                            </figcaption>
+                            />
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">
+                                I had the best week ever with my family
+                            </h3>
+                            <p class="paragraph">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam voluptatem dolor alias
+                                exercitationem fugiat nobis soluta ab quis
+                                accusantium atque labore beatae, unde nisi?
+                                Aperiam voluptatem dolor alias exercitationem
+                                fugiat nobis soluta ab quis accusantium atque
+                                labore beatae, unde nisi?Lorem, ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img
+                                src="img/nat-9.jpg"
+                                alt="Person on a tour"
+                                class="story__img"
+                            />
+
+                            <figcaption class="story__caption">
+                                Jack Wilson
+                            </figcaption>
+                            />
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small">
+                                WOW! My life is completely different now
+                            </h3>
+                            <p class="paragraph">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Aperiam voluptatem dolor alias
+                                exercitationem fugiat nobis soluta ab quis
+                                accusantium atque labore beatae, unde nisi?
+                                Aperiam voluptatem dolor alias exercitationem
+                                fugiat nobis soluta ab quis accusantium atque
+                                labore beatae, unde nisi?Lorem, ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="#" class="btn-text">Read all stories &rarr;</a>
+                </div>
+            </section>
+
+            <section class="section-book">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Start booking now
+                                </h2>
+                            </div>
+                            <form action="#" class="form">
+                                <div class="form__group">
+                                    <input
+                                        type="text"
+                                        class="form__input"
+                                        placeholder="Full Name"
+                                        required
+                                        id="name"
+                                    />
+                                    <label for="name" class="form__label"
+                                        >Full name</label
+                                    >
+                                </div>
+                                <div class="form__group">
+                                    <input
+                                        type="email"
+                                        class="form__input"
+                                        placeholder="Email address"
+                                        required
+                                        id="email"
+                                    />
+                                    <label for="email" class="form__label"
+                                        >Email address</label
+                                    >
+                                </div>
+
+                                <div class="form__group u-margin-bottom-medium">
+                                    <div class="form__radio-group">
+                                        <input
+                                            id="small"
+                                            type="radio"
+                                            class="form__radio-input"
+                                            name="size"
+                                        />
+                                        <label
+                                            for="small"
+                                            class="form__radio-label"
+                                        >
+                                            <span
+                                                class="form__radio-button"
+                                            ></span>
+                                            Small tour group</label
+                                        >
+                                    </div>
+                                    <div class="form__radio-group">
+                                        <input
+                                            id="large"
+                                            type="radio"
+                                            class="form__radio-input"
+                                            name="size"
+                                        />
+                                        <label
+                                            for="large"
+                                            class="form__radio-label"
+                                        >
+                                            <span
+                                                class="form__radio-button"
+                                            ></span>
+                                            Large tour group</label
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="form__group">
+                                    <button class="btn btn--green">
+                                        Next step &rarr;
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
         <!-- <section class="grid-test">
 
             <div class="row">
@@ -293,5 +495,51 @@
                 <div class="col-3-of-4">col-3-of-4</div>
             </div>
         </section> -->
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <img
+                    src="img/logo-green-2x.png"
+                    alt="Full logo"
+                    class="footer__logo"
+                />
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Company</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Contact us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Careers</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link"
+                                    >Privacy policy</a
+                                >
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Terms</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        This website was built by
+                        <a href="#" class="footer__link"
+                            ><span class="author">Arturs Anikins</span></a
+                        >
+                        during completion one of many parts of online course by
+                        Jonas Schmedtmann, thanks him a lot. I do not claim that
+                        the initial design is my own, hovewer I did some changes
+                        to it. Everything is used for learning purposes only.
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
