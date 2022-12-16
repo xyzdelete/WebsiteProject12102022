@@ -74,18 +74,23 @@
     &:link,
     &:visited {
         font-size: $default-font-size;
+        font-weight: 600;
         color: $color-primary-dark;
         display: inline-block;
         padding: 0.3rem 1rem;
         text-decoration: none;
         border-bottom: 0.1rem solid $color-primary-dark;
         transition: all 0.2s;
+
+        background-color: rgba($color-white, 0.6);
+
+        border-radius: 3px;
     }
 
     &:hover {
         background-color: $color-primary-dark;
         color: $color-white;
-        border-radius: 1rem;
+        border-radius: 3px;
         box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
         transform: translateY(-0.2rem);
     }

@@ -31,7 +31,7 @@
         );
         z-index: 1000;
 
-        transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
         //transform: scale(1000);
     }
@@ -113,7 +113,7 @@
         &::after {
             display: inline-block;
             width: 3rem;
-            height: 0.2rem;
+            height: 2px;
             background-color: $color-grey-dark-3;
         }
 

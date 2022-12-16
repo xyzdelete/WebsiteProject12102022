@@ -8,21 +8,34 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba($color-black, 0.9);
+    background-color: rgba($color-black, 0.3);
+
+    @supports (-webkit-backdrop-filter: blur(10px)) or
+        (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 
     z-index: 9999;
 
     &__content {
         overflow: hidden;
         @include absCenter;
-        width: 110rem;
+        width: 90%;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
         border-radius: 0.3rem;
         display: table;
+
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.5);
         transition: all 0.3s 0.1s;
+        @include respond(tab-port) {
+            width: 95%;
+            height: 95%;
+            display: inline-block;
+            text-align: center;
+        }
     }
 
     &__left {
@@ -35,6 +48,10 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+        @include respond(tab-port) {
+            width: 100%;
+            display: inline-block;
+        }
     }
 
     &__img {
@@ -51,6 +68,11 @@
         column-rule: 0.1rem solid $color-primary-dark;
 
         hyphens: auto;
+
+        @include respond(tab-land) {
+            display: block;
+            column-count: 1;
+        }
     }
 
     // Open states
@@ -76,10 +98,19 @@
             display: inline-block;
             transition: all 0.2s;
             line-height: 1;
+            @include respond(tab-port) {
+                font-size: 7rem;
+                color: $color-primary-dark;
+            }
         }
 
         &:hover {
             color: $color-primary-dark;
+        }
+    }
+    @include respond(tab-port) {
+        &__left img:nth-child(1) {
+            display: none;
         }
     }
 }

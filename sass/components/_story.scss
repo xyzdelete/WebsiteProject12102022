@@ -16,10 +16,18 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
 
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
@@ -31,6 +39,9 @@
 
     &__text {
         transform: skewX(12deg);
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
@@ -55,5 +66,15 @@
     &:hover &__img {
         transform: translateX(-4rem) scale(1);
         filter: blur(0.3rem) brightness(80%);
+    }
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
     }
 }
